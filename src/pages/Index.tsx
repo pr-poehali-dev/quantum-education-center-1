@@ -201,7 +201,7 @@ export default function Index() {
 
       {/* Three approaches */}
       <section className="px-6 md:px-12 py-16 bg-gray-50">
-        <div className="max-w-5xl mx-auto grid md:grid-cols-3 gap-5">
+        <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-5">
           {[
             {
               icon: "Brain",
