@@ -1,11 +1,11 @@
 import Icon from "@/components/ui/icon";
 
 const SPEAKER_EFREMOVA =
-  "https://cdn.poehali.dev/projects/766995cb-632a-44cf-867a-0b2115ca787d/files/2509851e-40ae-477b-abe9-2ad2a7078eeb.jpg";
+  "https://cdn.poehali.dev/projects/766995cb-632a-44cf-867a-0b2115ca787d/bucket/9854b3be-5967-46d8-babd-68c9602825c2.jpg";
 const SPEAKER_GRIGOREVA =
-  "https://cdn.poehali.dev/projects/766995cb-632a-44cf-867a-0b2115ca787d/files/e29344cf-dd99-4239-9b0e-8ef1864c519a.jpg";
+  "https://cdn.poehali.dev/projects/766995cb-632a-44cf-867a-0b2115ca787d/bucket/4c60adb4-186d-4d3e-a482-7bee35b3c546.jpg";
 const SPEAKER_STOTSKAYA =
-  "https://cdn.poehali.dev/projects/766995cb-632a-44cf-867a-0b2115ca787d/files/8d00f56c-3f05-4435-8e1f-7e97681d28ad.jpg";
+  "https://cdn.poehali.dev/projects/766995cb-632a-44cf-867a-0b2115ca787d/bucket/7a2d0375-6750-47f3-9fc2-cc0bffaa107c.jpg";
 
 const FullereneLogo = () => (
   <svg width="56" height="56" viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -423,11 +423,10 @@ export default function Index() {
             Напишите нам — расскажем об адресе, времени и формате встреч
           </p>
 
-          <div className="grid sm:grid-cols-3 gap-4 mb-12">
+          <div className="grid sm:grid-cols-2 gap-4 mb-12 max-w-xl mx-auto">
             {[
-              { icon: "Phone", label: "Телефон", value: "+7 (___) ___-__-__", color: "cyan" },
-              { icon: "Mail", label: "Email", value: "info@fulleren.ru", color: "purple" },
-              { icon: "MessageCircle", label: "Telegram", value: "@fulleren", color: "blue" },
+              { icon: "Phone", label: "Юлия Кот", value: "+7 927 072 16 17", color: "cyan" },
+              { icon: "MapPin", label: "Адрес", value: "г. Астрахань, Комсомольская Набережная, 22", color: "purple" },
             ].map((c, i) => (
               <div
                 key={i}
