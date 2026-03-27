@@ -453,7 +453,27 @@ export default function Index() {
             ))}
           </div>
 
-          <p className="text-[#8899AA] text-xs mt-6 opacity-60">
+          <a
+            href="https://max.ru/ВСТАВЬ_ССЫЛКУ"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-3 px-7 py-4 rounded-full border border-[rgba(30,201,138,0.3)] bg-[linear-gradient(135deg,rgba(30,201,138,0.1),rgba(124,58,237,0.1))] text-[#1ec98a] font-semibold text-sm transition-all duration-300 hover:border-[rgba(30,201,138,0.6)] hover:shadow-[0_0_30px_rgba(30,201,138,0.2)] hover:-translate-y-0.5 mt-2 mb-6"
+          >
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+              <circle cx="12" cy="12" r="11" fill="url(#maxG)" opacity="0.15"/>
+              <path d="M7 17V8.5L12 14l5-5.5V17" stroke="url(#maxG)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+              <defs>
+                <linearGradient id="maxG" x1="0" y1="0" x2="24" y2="24" gradientUnits="userSpaceOnUse">
+                  <stop offset="0%" stopColor="#1ec98a"/>
+                  <stop offset="100%" stopColor="#7c3aed"/>
+                </linearGradient>
+              </defs>
+            </svg>
+            Связаться с организатором в Max
+            <span className="text-white/40 font-normal text-xs">+7 927 072 16 73</span>
+          </a>
+
+          <p className="text-[#8899AA] text-xs opacity-60">
             Центр квантовой педагогики и психологии «Фуллерен»
           </p>
         </div>
