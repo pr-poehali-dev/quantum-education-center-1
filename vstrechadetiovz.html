@@ -1,0 +1,821 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Встречи 10 и 17 апреля — Центр Фуллерен</title>
+  <meta name="description" content="Встречи для родителей детей с СДВГ, РАС, и взрослых с деменцией и Альцгеймером. 10 и 17 апреля, г. Астрахань"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600;700&family=Golos+Text:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --neon-cyan: #2DFFC8;
+      --neon-purple: #A855F7;
+      --dark-bg: #080C14;
+      --card-bg: #0E1420;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Golos Text', sans-serif;
+      background-color: var(--dark-bg);
+      color: #e2e8f0;
+      overflow-x: hidden;
+    }
+
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.035'/%3E%3C/svg%3E");
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    /* NAV */
+    nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 50;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 16px 48px;
+      background: rgba(8,12,20,0.88);
+      backdrop-filter: blur(20px);
+      border-bottom: 1px solid rgba(45,255,200,0.07);
+    }
+
+    .nav-logo { display: flex; align-items: center; gap: 12px; text-decoration: none; }
+    .nav-logo-text p:first-child { font-family: 'Oswald', sans-serif; font-weight: 600; color: #fff; font-size: 15px; }
+    .nav-logo-text p:last-child { color: var(--neon-cyan); font-size: 11px; opacity: 0.7; }
+
+    .nav-links { display: flex; align-items: center; gap: 24px; }
+    .nav-links a { color: #8899AA; text-decoration: none; font-size: 14px; font-weight: 500; transition: color 0.2s; }
+    .nav-links a:hover { color: var(--neon-cyan); }
+
+    /* HERO */
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 100px 24px 80px;
+      position: relative;
+      overflow: hidden;
+      background:
+        radial-gradient(ellipse 80% 60% at 20% -10%, rgba(45,255,200,0.12) 0%, transparent 60%),
+        radial-gradient(ellipse 60% 50% at 80% 10%, rgba(168,85,247,0.1) 0%, transparent 50%),
+        var(--dark-bg);
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image:
+        linear-gradient(rgba(45,255,200,0.04) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(45,255,200,0.04) 1px, transparent 1px);
+      background-size: 60px 60px;
+    }
+
+    .orb {
+      position: absolute;
+      border-radius: 50%;
+      pointer-events: none;
+    }
+    .orb-1 { top: 25%; left: 40px; width: 256px; height: 256px; background: radial-gradient(circle, rgba(45,255,200,0.08) 0%, transparent 70%); animation: float-slow 8s ease-in-out infinite; }
+    .orb-2 { bottom: 25%; right: 40px; width: 384px; height: 384px; background: radial-gradient(circle, rgba(168,85,247,0.07) 0%, transparent 70%); animation: float-medium 10s ease-in-out infinite; }
+
+    @keyframes float-slow { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-20px)} }
+    @keyframes float-medium { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-15px)} }
+    @keyframes rotate-slow { from{transform:rotate(0deg)} to{transform:rotate(360deg)} }
+    @keyframes pulse-glow { 0%,100%{opacity:0.4} 50%{opacity:1} }
+    @keyframes slide-up { from{opacity:0;transform:translateY(40px)} to{opacity:1;transform:translateY(0)} }
+    @keyframes bounce { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-6px)} }
+
+    .hero-inner { position: relative; z-index: 1; max-width: 900px; margin: 0 auto; text-align: center; }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: linear-gradient(135deg, rgba(45,255,200,0.15), rgba(45,255,200,0.05));
+      border: 1px solid rgba(45,255,200,0.3);
+      color: var(--neon-cyan);
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      padding: 5px 14px;
+      border-radius: 100px;
+      margin-bottom: 32px;
+    }
+
+    .badge-dot {
+      width: 8px; height: 8px;
+      border-radius: 50%;
+      background: var(--neon-cyan);
+      animation: pulse-glow 3s ease-in-out infinite;
+    }
+
+    h1 {
+      font-family: 'Oswald', sans-serif;
+      font-weight: 700;
+      font-size: clamp(40px, 8vw, 88px);
+      color: #fff;
+      line-height: 1;
+      text-transform: uppercase;
+      letter-spacing: -0.02em;
+      margin-bottom: 16px;
+    }
+
+    .h1-gradient {
+      background: linear-gradient(135deg, var(--neon-cyan), #00D4AA);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      display: block;
+    }
+
+    .h1-sub {
+      display: block;
+      font-family: 'Golos Text', sans-serif;
+      font-weight: 300;
+      font-size: clamp(22px, 3.5vw, 44px);
+      color: rgba(255,255,255,0.35);
+      text-transform: none;
+      letter-spacing: 0;
+      margin-top: 8px;
+    }
+
+    .logo-spin {
+      display: flex;
+      justify-content: center;
+      margin: 32px 0;
+    }
+
+    .logo-spin svg { animation: rotate-slow 20s linear infinite; }
+
+    .hero-text {
+      color: #8899AA;
+      font-size: clamp(15px, 2vw, 18px);
+      max-width: 600px;
+      margin: 0 auto 32px;
+      line-height: 1.7;
+    }
+
+    .hero-text .accent-cyan { color: var(--neon-cyan); }
+    .hero-text .accent-purple { color: #C084FC; }
+
+    .dates-row {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 16px;
+      flex-wrap: wrap;
+      margin-bottom: 40px;
+    }
+
+    .date-card {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      background: var(--card-bg);
+      border: 1px solid rgba(45,255,200,0.15);
+      box-shadow: 0 4px 40px rgba(0,0,0,0.4);
+      border-radius: 16px;
+      padding: 16px 24px;
+    }
+
+    .date-card-purple { border-color: rgba(168,85,247,0.15); }
+
+    .date-icon {
+      width: 40px; height: 40px;
+      border-radius: 10px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 18px;
+    }
+
+    .date-icon-cyan { background: rgba(45,255,200,0.1); }
+    .date-icon-purple { background: rgba(168,85,247,0.1); }
+
+    .date-card-title { font-family: 'Oswald', sans-serif; font-weight: 700; color: #fff; font-size: 20px; }
+    .date-card-sub-cyan { color: var(--neon-cyan); font-size: 11px; opacity: 0.8; }
+    .date-card-sub-purple { color: #C084FC; font-size: 11px; opacity: 0.8; }
+
+    .dates-divider { width: 32px; height: 1px; background: linear-gradient(90deg, rgba(45,255,200,0.4), rgba(168,85,247,0.4)); }
+
+    .scroll-hint {
+      position: absolute;
+      bottom: 32px; left: 50%;
+      transform: translateX(-50%);
+      display: flex; flex-direction: column; align-items: center; gap: 6px;
+      opacity: 0.4;
+    }
+    .scroll-hint span { font-size: 10px; color: #8899AA; text-transform: uppercase; letter-spacing: 0.1em; }
+    .scroll-hint-arrow { color: var(--neon-cyan); font-size: 16px; animation: bounce 2s ease-in-out infinite; }
+
+    /* APPROACHES */
+    .approaches { max-width: 1100px; margin: 0 auto; padding: 80px 24px; }
+
+    .approaches-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 24px;
+    }
+
+    /* CARDS */
+    .neon-card {
+      background: var(--card-bg);
+      border: 1px solid rgba(45,255,200,0.15);
+      box-shadow: 0 4px 40px rgba(0,0,0,0.4);
+      border-radius: 20px;
+      transition: all 0.4s ease;
+    }
+    .neon-card:hover {
+      border-color: rgba(45,255,200,0.35);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 60px rgba(0,0,0,0.5), 0 0 40px rgba(45,255,200,0.06);
+    }
+
+    .approach-card { padding: 24px; display: flex; flex-direction: column; gap: 16px; }
+
+    .approach-icon {
+      width: 48px; height: 48px;
+      border-radius: 12px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 22px;
+    }
+    .icon-cyan { background: rgba(45,255,200,0.1); }
+    .icon-blue { background: rgba(96,165,250,0.1); }
+    .icon-purple { background: rgba(168,85,247,0.1); }
+
+    .approach-title { font-family: 'Oswald', sans-serif; font-weight: 600; color: #fff; font-size: 18px; }
+    .approach-text { color: #8899AA; font-size: 14px; line-height: 1.6; }
+
+    /* SPEAKERS */
+    .speakers { padding: 80px 24px; }
+    .speakers-inner { max-width: 1100px; margin: 0 auto; }
+
+    .section-header { text-align: center; margin-bottom: 64px; }
+
+    .section-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: linear-gradient(135deg, rgba(45,255,200,0.15), rgba(45,255,200,0.05));
+      border: 1px solid rgba(45,255,200,0.3);
+      color: var(--neon-cyan);
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      padding: 5px 14px;
+      border-radius: 100px;
+      margin-bottom: 16px;
+    }
+
+    h2 {
+      font-family: 'Oswald', sans-serif;
+      font-weight: 700;
+      font-size: clamp(32px, 5vw, 48px);
+      color: #fff;
+      text-transform: uppercase;
+      letter-spacing: -0.01em;
+      line-height: 1.1;
+    }
+
+    .date-block { margin-bottom: 64px; }
+
+    .date-block-header {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      margin-bottom: 32px;
+    }
+
+    .date-label {
+      font-family: 'Oswald', sans-serif;
+      font-weight: 700;
+      font-size: 18px;
+      padding: 8px 20px;
+      border-radius: 100px;
+      white-space: nowrap;
+    }
+
+    .date-label-cyan {
+      background: linear-gradient(135deg, rgba(45,255,200,0.15), rgba(45,255,200,0.05));
+      border: 1px solid rgba(45,255,200,0.3);
+      color: var(--neon-cyan);
+    }
+
+    .date-label-purple {
+      background: linear-gradient(135deg, rgba(168,85,247,0.15), rgba(168,85,247,0.05));
+      border: 1px solid rgba(168,85,247,0.3);
+      color: #C084FC;
+    }
+
+    .date-line { flex: 1; height: 1px; }
+    .date-line-cyan { background: linear-gradient(90deg, rgba(45,255,200,0.4), transparent); }
+    .date-line-purple { background: linear-gradient(90deg, rgba(168,85,247,0.4), transparent); }
+
+    .speakers-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 24px;
+    }
+
+    .speaker-card { padding: 28px 32px; display: flex; flex-direction: column; gap: 20px; }
+
+    .speaker-top { display: flex; align-items: flex-start; gap: 20px; }
+
+    .speaker-photo-wrap { position: relative; flex-shrink: 0; }
+
+    .speaker-photo {
+      width: 90px; height: 90px;
+      border-radius: 16px;
+      object-fit: cover;
+      object-position: top center;
+      border: 2px solid rgba(45,255,200,0.25);
+      box-shadow: 0 0 30px rgba(45,255,200,0.1), 0 8px 32px rgba(0,0,0,0.4);
+    }
+
+    .speaker-photo-purple {
+      border-color: rgba(168,85,247,0.25);
+      box-shadow: 0 0 30px rgba(168,85,247,0.1), 0 8px 32px rgba(0,0,0,0.4);
+    }
+
+    .speaker-star {
+      position: absolute;
+      bottom: -8px; right: -8px;
+      width: 24px; height: 24px;
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 11px; font-weight: 700;
+    }
+
+    .star-cyan { background: var(--neon-cyan); color: var(--dark-bg); }
+    .star-purple { background: #A855F7; color: #fff; }
+
+    .speaker-info { flex: 1; }
+
+    .speaker-date {
+      display: inline-block;
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      padding: 3px 10px;
+      border-radius: 100px;
+      margin-bottom: 8px;
+    }
+
+    .speaker-date-cyan {
+      background: linear-gradient(135deg, rgba(45,255,200,0.15), rgba(45,255,200,0.05));
+      border: 1px solid rgba(45,255,200,0.3);
+      color: var(--neon-cyan);
+    }
+
+    .speaker-date-purple {
+      background: linear-gradient(135deg, rgba(168,85,247,0.15), rgba(168,85,247,0.05));
+      border: 1px solid rgba(168,85,247,0.3);
+      color: #C084FC;
+    }
+
+    .speaker-name { font-family: 'Oswald', sans-serif; font-weight: 600; color: #fff; font-size: 18px; line-height: 1.2; margin-bottom: 4px; }
+    .speaker-role-cyan { color: var(--neon-cyan); font-size: 13px; opacity: 0.85; }
+    .speaker-role-purple { color: #C084FC; font-size: 13px; opacity: 0.85; }
+
+    .speaker-topic {
+      padding: 12px 16px;
+      border-radius: 12px;
+      font-size: 13px;
+      font-weight: 500;
+    }
+
+    .topic-cyan {
+      background: rgba(45,255,200,0.06);
+      border: 1px solid rgba(45,255,200,0.12);
+      color: var(--neon-cyan);
+    }
+
+    .topic-purple {
+      background: rgba(168,85,247,0.06);
+      border: 1px solid rgba(168,85,247,0.12);
+      color: #C084FC;
+    }
+
+    .topic-label {
+      font-size: 10px;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      opacity: 0.7;
+      display: block;
+      margin-bottom: 4px;
+    }
+
+    .speaker-desc { color: #8899AA; font-size: 13px; line-height: 1.65; }
+
+    /* DIVIDER */
+    .section-divider {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+    .divider-line { height: 1px; background: linear-gradient(90deg, transparent, rgba(45,255,200,0.4), transparent); }
+
+    /* CONTACTS */
+    .contacts { padding: 80px 24px; }
+    .contacts-inner { max-width: 700px; margin: 0 auto; text-align: center; }
+
+    .contacts-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 16px;
+      margin-bottom: 48px;
+    }
+
+    .contact-card {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 12px;
+      padding: 24px 20px;
+      cursor: pointer;
+      text-decoration: none;
+    }
+
+    .contact-icon {
+      width: 48px; height: 48px;
+      border-radius: 12px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 20px;
+    }
+
+    .contact-label { color: #8899AA; font-size: 11px; text-transform: uppercase; letter-spacing: 0.1em; }
+    .contact-value { color: #fff; font-weight: 500; font-size: 15px; margin-top: 2px; }
+
+    /* FOOTER */
+    footer {
+      border-top: 1px solid rgba(45,255,200,0.07);
+      padding: 32px 48px;
+    }
+
+    .footer-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+
+    .footer-logo { display: flex; align-items: center; gap: 12px; }
+    .footer-logo-text p:first-child { font-family: 'Oswald', sans-serif; font-weight: 600; color: #fff; font-size: 14px; }
+    .footer-logo-text p:last-child { color: #8899AA; font-size: 12px; }
+
+    .footer-links { display: flex; gap: 24px; }
+    .footer-links a { color: #8899AA; text-decoration: none; font-size: 14px; transition: color 0.2s; }
+    .footer-links a:hover { color: var(--neon-cyan); }
+
+    .footer-copy { color: #8899AA; font-size: 12px; opacity: 0.5; }
+
+    /* RESPONSIVE */
+    @media (max-width: 768px) {
+      nav { padding: 14px 20px; }
+      .nav-links a:not(:last-child) { display: none; }
+      .dates-divider { display: none; }
+      footer { padding: 24px 20px; }
+      .footer-inner { flex-direction: column; align-items: center; text-align: center; }
+    }
+
+    /* SCROLLBAR */
+    ::-webkit-scrollbar { width: 4px; }
+    ::-webkit-scrollbar-track { background: var(--dark-bg); }
+    ::-webkit-scrollbar-thumb { background: rgba(45,255,200,0.3); border-radius: 2px; }
+  </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="./index.html" class="nav-logo">
+    <svg width="44" height="44" viewBox="0 0 56 56" fill="none">
+      <circle cx="28" cy="28" r="26" stroke="url(#ng)" stroke-width="1.5" fill="none" opacity="0.5"/>
+      <circle cx="28" cy="28" r="18" stroke="url(#ng)" stroke-width="1.5" fill="none" opacity="0.7"/>
+      <circle cx="28" cy="12" r="3" fill="url(#ng)"/>
+      <circle cx="28" cy="44" r="3" fill="url(#ng)"/>
+      <circle cx="12" cy="20" r="3" fill="url(#ng)"/>
+      <circle cx="44" cy="20" r="3" fill="url(#ng)"/>
+      <circle cx="12" cy="36" r="3" fill="url(#ng)"/>
+      <circle cx="44" cy="36" r="3" fill="url(#ng)"/>
+      <line x1="28" y1="12" x2="12" y2="20" stroke="url(#ng)" stroke-width="1" opacity="0.6"/>
+      <line x1="28" y1="12" x2="44" y2="20" stroke="url(#ng)" stroke-width="1" opacity="0.6"/>
+      <line x1="12" y1="20" x2="12" y2="36" stroke="url(#ng)" stroke-width="1" opacity="0.6"/>
+      <line x1="44" y1="20" x2="44" y2="36" stroke="url(#ng)" stroke-width="1" opacity="0.6"/>
+      <line x1="12" y1="36" x2="28" y2="44" stroke="url(#ng)" stroke-width="1" opacity="0.6"/>
+      <line x1="44" y1="36" x2="28" y2="44" stroke="url(#ng)" stroke-width="1" opacity="0.6"/>
+      <line x1="28" y1="12" x2="28" y2="44" stroke="url(#ng)" stroke-width="0.5" opacity="0.3"/>
+      <line x1="12" y1="20" x2="44" y2="36" stroke="url(#ng)" stroke-width="0.5" opacity="0.3"/>
+      <line x1="44" y1="20" x2="12" y2="36" stroke="url(#ng)" stroke-width="0.5" opacity="0.3"/>
+      <defs>
+        <linearGradient id="ng" x1="0" y1="0" x2="56" y2="56" gradientUnits="userSpaceOnUse">
+          <stop offset="0%" stop-color="#2DFFC8"/>
+          <stop offset="100%" stop-color="#A855F7"/>
+        </linearGradient>
+      </defs>
+    </svg>
+    <div class="nav-logo-text">
+      <p>Фуллерен</p>
+      <p>квантовая педагогика и психология</p>
+    </div>
+  </a>
+  <div class="nav-links">
+    <a href="./index.html">Главная</a>
+    <a href="#speakers">Спикеры</a>
+    <a href="#contacts">Контакты</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="orb orb-1"></div>
+  <div class="orb orb-2"></div>
+
+  <div class="hero-inner">
+    <div class="badge">
+      <span class="badge-dot"></span>
+      10 и 17 апреля · Встречи со специалистами
+    </div>
+
+    <h1>
+      Центр квантовой
+      <span class="h1-gradient">педагогики</span>
+      <span class="h1-sub">и психологии</span>
+    </h1>
+
+    <div class="logo-spin">
+      <svg width="110" height="110" viewBox="0 0 56 56" fill="none">
+        <circle cx="28" cy="28" r="26" stroke="url(#hg)" stroke-width="1.5" fill="none" opacity="0.5"/>
+        <circle cx="28" cy="28" r="18" stroke="url(#hg)" stroke-width="1.5" fill="none" opacity="0.7"/>
+        <circle cx="28" cy="12" r="3" fill="url(#hg)"/>
+        <circle cx="28" cy="44" r="3" fill="url(#hg)"/>
+        <circle cx="12" cy="20" r="3" fill="url(#hg)"/>
+        <circle cx="44" cy="20" r="3" fill="url(#hg)"/>
+        <circle cx="12" cy="36" r="3" fill="url(#hg)"/>
+        <circle cx="44" cy="36" r="3" fill="url(#hg)"/>
+        <line x1="28" y1="12" x2="12" y2="20" stroke="url(#hg)" stroke-width="1" opacity="0.6"/>
+        <line x1="28" y1="12" x2="44" y2="20" stroke="url(#hg)" stroke-width="1" opacity="0.6"/>
+        <line x1="12" y1="20" x2="12" y2="36" stroke="url(#hg)" stroke-width="1" opacity="0.6"/>
+        <line x1="44" y1="20" x2="44" y2="36" stroke="url(#hg)" stroke-width="1" opacity="0.6"/>
+        <line x1="12" y1="36" x2="28" y2="44" stroke="url(#hg)" stroke-width="1" opacity="0.6"/>
+        <line x1="44" y1="36" x2="28" y2="44" stroke="url(#hg)" stroke-width="1" opacity="0.6"/>
+        <line x1="28" y1="12" x2="28" y2="44" stroke="url(#hg)" stroke-width="0.5" opacity="0.3"/>
+        <line x1="12" y1="20" x2="44" y2="36" stroke="url(#hg)" stroke-width="0.5" opacity="0.3"/>
+        <line x1="44" y1="20" x2="12" y2="36" stroke="url(#hg)" stroke-width="0.5" opacity="0.3"/>
+        <defs>
+          <linearGradient id="hg" x1="0" y1="0" x2="56" y2="56" gradientUnits="userSpaceOnUse">
+            <stop offset="0%" stop-color="#2DFFC8"/>
+            <stop offset="100%" stop-color="#A855F7"/>
+          </linearGradient>
+        </defs>
+      </svg>
+    </div>
+
+    <p class="hero-text">
+      Приглашаем родителей, столкнувшихся с
+      <span class="accent-cyan">СДВГ, расстройствами аутичного спектра</span>,
+      а также близких взрослых с
+      <span class="accent-purple">деменцией и Альцгеймером</span>
+    </p>
+
+    <div class="dates-row">
+      <div class="date-card">
+        <div class="date-icon date-icon-cyan">📅</div>
+        <div>
+          <div class="date-card-title">10 апреля</div>
+          <div class="date-card-sub-cyan">Психология · Нейропсихология</div>
+        </div>
+      </div>
+      <div class="dates-divider"></div>
+      <div class="date-card date-card-purple">
+        <div class="date-icon date-icon-purple">📅</div>
+        <div>
+          <div class="date-card-title">17 апреля</div>
+          <div class="date-card-sub-purple">Микробиология · Ароматерапия</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="scroll-hint">
+    <span>прокрутить</span>
+    <div class="scroll-hint-arrow">↓</div>
+  </div>
+</section>
+
+<!-- APPROACHES -->
+<section class="approaches">
+  <div class="approaches-grid">
+    <div class="neon-card approach-card">
+      <div class="approach-icon icon-cyan">🧠</div>
+      <div class="approach-title">Квантовая психология</div>
+      <div class="approach-text">Работа с состоянием родителей как инструмент помощи детям</div>
+    </div>
+    <div class="neon-card approach-card">
+      <div class="approach-icon icon-blue">⚡</div>
+      <div class="approach-title">Нейропсихология</div>
+      <div class="approach-text">Научно обоснованные методики развития пластичности мозга</div>
+    </div>
+    <div class="neon-card approach-card">
+      <div class="approach-icon icon-purple">🌿</div>
+      <div class="approach-title">Телесные практики</div>
+      <div class="approach-text">Ароматерапия как дополнение в работе с неврологическими нарушениями</div>
+    </div>
+  </div>
+</section>
+
+<!-- SPEAKERS -->
+<section class="speakers" id="speakers">
+  <div class="speakers-inner">
+
+    <div class="section-header">
+      <div class="section-badge">👥 Наши спикеры</div>
+      <h2>Три встречи —<br><span class="h1-gradient">три подхода</span></h2>
+    </div>
+
+    <!-- 10 апреля -->
+    <div class="date-block">
+      <div class="date-block-header">
+        <div class="date-label date-label-cyan">10 апреля</div>
+        <div class="date-line date-line-cyan"></div>
+      </div>
+      <div class="speakers-grid">
+
+        <!-- Ефремова -->
+        <div class="neon-card speaker-card">
+          <div class="speaker-top">
+            <div class="speaker-photo-wrap">
+              <img src="https://cdn.poehali.dev/projects/766995cb-632a-44cf-867a-0b2115ca787d/bucket/c4457521-41f9-405f-adc0-ba28a5609ce1.png"
+                   alt="Ефремова Мария Викторовна" class="speaker-photo"/>
+              <div class="speaker-star star-cyan">✦</div>
+            </div>
+            <div class="speaker-info">
+              <span class="speaker-date speaker-date-cyan">10 апреля</span>
+              <div class="speaker-name">Ефремова Мария Викторовна</div>
+              <div class="speaker-role-cyan">Специалист квантовой психологии</div>
+            </div>
+          </div>
+          <div class="speaker-topic topic-cyan">
+            <span class="topic-label">Тема встречи:</span>
+            Как помочь ребёнку через состояние родителей?
+          </div>
+          <p class="speaker-desc">Основатель Центра поддержки семейного образования «Вдохновение» с 9-летним опытом работы в области родительско-детских отношений. В её классе дети, у которых диагностировали отсутствие внимания, теперь находят ошибки у учителей.</p>
+        </div>
+
+        <!-- Григорьева -->
+        <div class="neon-card speaker-card">
+          <div class="speaker-top">
+            <div class="speaker-photo-wrap">
+              <img src="https://cdn.poehali.dev/projects/766995cb-632a-44cf-867a-0b2115ca787d/bucket/4c60adb4-186d-4d3e-a482-7bee35b3c546.jpg"
+                   alt="Григорьева Надежда Александровна" class="speaker-photo"/>
+              <div class="speaker-star star-cyan">✦</div>
+            </div>
+            <div class="speaker-info">
+              <span class="speaker-date speaker-date-cyan">10 апреля</span>
+              <div class="speaker-name">Григорьева Надежда Александровна</div>
+              <div class="speaker-role-cyan">Специалист по нейропсихологии</div>
+            </div>
+          </div>
+          <div class="speaker-topic topic-cyan">
+            <span class="topic-label">Тема встречи:</span>
+            Как помочь ребёнку через методики нейропсихологии?
+          </div>
+          <p class="speaker-desc">Основатель центра раннего развития «Умка», педагог-наставник Всероссийского конкурса «Большая перемена». Убеждена: мозг каждого ребёнка пластичен — помочь можно каждому.</p>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- 17 апреля -->
+    <div class="date-block">
+      <div class="date-block-header">
+        <div class="date-label date-label-purple">17 апреля</div>
+        <div class="date-line date-line-purple"></div>
+      </div>
+      <div class="speakers-grid" style="max-width:520px;">
+
+        <!-- Стоцкая -->
+        <div class="neon-card speaker-card">
+          <div class="speaker-top">
+            <div class="speaker-photo-wrap">
+              <img src="https://cdn.poehali.dev/projects/766995cb-632a-44cf-867a-0b2115ca787d/bucket/7a2d0375-6750-47f3-9fc2-cc0bffaa107c.jpg"
+                   alt="Стоцкая Екатерина" class="speaker-photo speaker-photo-purple"/>
+              <div class="speaker-star star-purple">✦</div>
+            </div>
+            <div class="speaker-info">
+              <span class="speaker-date speaker-date-purple">17 апреля</span>
+              <div class="speaker-name">Стоцкая Екатерина</div>
+              <div class="speaker-role-purple">Микробиолог · Выпускница МГУ · Москва</div>
+            </div>
+          </div>
+          <div class="speaker-topic topic-purple">
+            <span class="topic-label">Тема встречи:</span>
+            Как помочь ребёнку и родителю через тело?
+          </div>
+          <p class="speaker-desc">Гость нашего города из Москвы. Создатель курса «Аутизм и ароматерапия» — за 4 года более 3300 участников. Люди с неврологическими нарушениями (аутизм, деменция, Альцгеймер) значительно улучшили качество жизни.</p>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- DIVIDER -->
+<div class="section-divider"><div class="divider-line"></div></div>
+
+<!-- CONTACTS -->
+<section class="contacts" id="contacts">
+  <div class="contacts-inner">
+    <div class="section-badge" style="margin-bottom:16px;">📍 Контакты</div>
+    <h2 style="margin-bottom:16px;">Хотите прийти?</h2>
+    <p style="color:#8899AA;font-size:17px;margin-bottom:48px;line-height:1.6;">
+      Напишите нам — расскажем о времени и формате встреч
+    </p>
+
+    <div class="contacts-grid">
+      <a href="tel:+79270721617" class="neon-card contact-card">
+        <div class="contact-icon icon-cyan">📞</div>
+        <div>
+          <div class="contact-label">Юлия Кот</div>
+          <div class="contact-value">+7 927 072 16 17</div>
+        </div>
+      </a>
+      <div class="neon-card contact-card">
+        <div class="contact-icon icon-purple">📍</div>
+        <div>
+          <div class="contact-label">Адрес</div>
+          <div class="contact-value" style="font-size:13px;">г. Астрахань, Комсомольская Набережная, 22</div>
+        </div>
+      </div>
+    </div>
+
+    <p style="color:#8899AA;font-size:12px;opacity:0.6;">
+      Центр квантовой педагогики и психологии «Фуллерен»
+    </p>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-logo">
+      <svg width="40" height="40" viewBox="0 0 56 56" fill="none">
+        <circle cx="28" cy="28" r="26" stroke="url(#fg)" stroke-width="1.5" fill="none" opacity="0.5"/>
+        <circle cx="28" cy="28" r="18" stroke="url(#fg)" stroke-width="1.5" fill="none" opacity="0.7"/>
+        <circle cx="28" cy="12" r="3" fill="url(#fg)"/>
+        <circle cx="28" cy="44" r="3" fill="url(#fg)"/>
+        <circle cx="12" cy="20" r="3" fill="url(#fg)"/>
+        <circle cx="44" cy="20" r="3" fill="url(#fg)"/>
+        <circle cx="12" cy="36" r="3" fill="url(#fg)"/>
+        <circle cx="44" cy="36" r="3" fill="url(#fg)"/>
+        <line x1="28" y1="12" x2="12" y2="20" stroke="url(#fg)" stroke-width="1" opacity="0.6"/>
+        <line x1="28" y1="12" x2="44" y2="20" stroke="url(#fg)" stroke-width="1" opacity="0.6"/>
+        <line x1="12" y1="20" x2="12" y2="36" stroke="url(#fg)" stroke-width="1" opacity="0.6"/>
+        <line x1="44" y1="20" x2="44" y2="36" stroke="url(#fg)" stroke-width="1" opacity="0.6"/>
+        <line x1="12" y1="36" x2="28" y2="44" stroke="url(#fg)" stroke-width="1" opacity="0.6"/>
+        <line x1="44" y1="36" x2="28" y2="44" stroke="url(#fg)" stroke-width="1" opacity="0.6"/>
+        <line x1="28" y1="12" x2="28" y2="44" stroke="url(#fg)" stroke-width="0.5" opacity="0.3"/>
+        <line x1="12" y1="20" x2="44" y2="36" stroke="url(#fg)" stroke-width="0.5" opacity="0.3"/>
+        <line x1="44" y1="20" x2="12" y2="36" stroke="url(#fg)" stroke-width="0.5" opacity="0.3"/>
+        <defs>
+          <linearGradient id="fg" x1="0" y1="0" x2="56" y2="56" gradientUnits="userSpaceOnUse">
+            <stop offset="0%" stop-color="#2DFFC8"/>
+            <stop offset="100%" stop-color="#A855F7"/>
+          </linearGradient>
+        </defs>
+      </svg>
+      <div class="footer-logo-text">
+        <p>Фуллерен</p>
+        <p>Центр квантовой педагогики и психологии</p>
+      </div>
+    </div>
+    <div class="footer-links">
+      <a href="./index.html">Главная</a>
+      <a href="#speakers">Спикеры</a>
+      <a href="#contacts">Контакты</a>
+    </div>
+    <div class="footer-copy">© 2025 Фуллерен</div>
+  </div>
+</footer>
+
+</body>
+</html>
