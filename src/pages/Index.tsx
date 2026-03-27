@@ -148,12 +148,6 @@ export default function Index() {
           >
             Контакты
           </a>
-          <a
-            href="#contacts"
-            className="btn-neon px-5 py-2 rounded-xl text-sm font-oswald font-semibold uppercase tracking-widest"
-          >
-            Записаться
-          </a>
         </div>
       </nav>
 
@@ -258,12 +252,6 @@ export default function Index() {
             </div>
           </div>
 
-          <a
-            href="#contacts"
-            className="animate-slide-up-delay3 btn-neon inline-block px-10 py-4 rounded-2xl text-base font-oswald font-bold uppercase tracking-widest"
-          >
-            Зарегистрироваться на встречу
-          </a>
         </div>
 
         <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 opacity-40">
@@ -460,13 +448,6 @@ export default function Index() {
               </div>
             ))}
           </div>
-
-          <a
-            href="#"
-            className="btn-neon inline-block px-12 py-4 rounded-2xl text-base font-oswald font-bold uppercase tracking-widest"
-          >
-            Зарегистрироваться
-          </a>
 
           <p className="text-[#8899AA] text-xs mt-6 opacity-60">
             Центр квантовой педагогики и психологии «Фуллерен»
