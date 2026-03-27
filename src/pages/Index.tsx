@@ -28,8 +28,8 @@ const FullereneLogo = () => (
     <line x1="44" y1="20" x2="12" y2="36" stroke="url(#logoGrad)" strokeWidth="0.5" opacity="0.3" />
     <defs>
       <linearGradient id="logoGrad" x1="0" y1="0" x2="56" y2="56" gradientUnits="userSpaceOnUse">
-        <stop offset="0%" stopColor="#FF8C2D" />
-        <stop offset="100%" stopColor="#C4622A" />
+        <stop offset="0%" stopColor="#1ec98a" />
+        <stop offset="100%" stopColor="#7c3aed" />
       </linearGradient>
     </defs>
   </svg>
@@ -73,7 +73,7 @@ const SpeakerCard = ({
           />
           <div
             className={`absolute -bottom-2 -right-2 w-6 h-6 rounded-full flex items-center justify-center text-xs font-bold ${
-              isCyan ? "bg-[#FF8C2D]" : "bg-[#C4622A]"
+              isCyan ? "bg-[#1ec98a]" : "bg-[#7c3aed]"
             } text-white`}
           >
             ✦
@@ -92,7 +92,7 @@ const SpeakerCard = ({
           </h3>
           <p
             className={`text-sm mt-1 ${
-              isCyan ? "text-[#FF8C2D]" : "text-[#E8A05A]"
+              isCyan ? "text-[#1ec98a]" : "text-[#a78bfa]"
             } opacity-80`}
           >
             {title}
@@ -103,8 +103,8 @@ const SpeakerCard = ({
       <div
         className={`px-4 py-3 rounded-xl text-sm font-medium ${
           isCyan
-            ? "bg-[rgba(255,140,45,0.07)] border border-[rgba(255,140,45,0.15)] text-[#FF8C2D]"
-            : "bg-[rgba(196,98,42,0.07)] border border-[rgba(196,98,42,0.15)] text-[#E8A05A]"
+            ? "bg-[rgba(30,201,138,0.07)] border border-[rgba(30,201,138,0.15)] text-[#1ec98a]"
+            : "bg-[rgba(124,58,237,0.07)] border border-[rgba(124,58,237,0.15)] text-[#a78bfa]"
         }`}
       >
         <span className="opacity-70 text-xs uppercase tracking-wider font-golos">Тема встречи:</span>
@@ -121,8 +121,8 @@ export default function Index() {
     <div className="min-h-screen font-golos" style={{ backgroundColor: "var(--dark-bg)" }}>
       {/* Navigation */}
       <nav
-        className="fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-6 md:px-12 py-4 backdrop-blur-xl border-b border-[rgba(255,140,45,0.08)]"
-        style={{ background: "rgba(16,10,4,0.88)" }}
+        className="fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-6 md:px-12 py-4 backdrop-blur-xl border-b border-[rgba(30,201,138,0.08)]"
+        style={{ background: "rgba(6,11,16,0.88)" }}
       >
         <div className="flex items-center gap-3">
           <FullereneLogo />
@@ -130,7 +130,7 @@ export default function Index() {
             <p className="font-oswald font-semibold text-white text-sm md:text-base leading-tight">
               Фуллерен
             </p>
-            <p className="text-[#FF8C2D] text-xs opacity-70 leading-tight hidden md:block">
+            <p className="text-[#1ec98a] text-xs opacity-70 leading-tight hidden md:block">
               квантовая педагогика и психология
             </p>
           </div>
@@ -140,19 +140,19 @@ export default function Index() {
             href="https://www.fullerenclub.ru/"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-[#8899AA] hover:text-[#FF8C2D] transition-colors text-sm font-medium hidden md:block"
+            className="text-[#8899AA] hover:text-[#1ec98a] transition-colors text-sm font-medium hidden md:block"
           >
             Сайт центра
           </a>
           <a
             href="#speakers"
-            className="text-[#8899AA] hover:text-[#FF8C2D] transition-colors text-sm font-medium hidden md:block"
+            className="text-[#8899AA] hover:text-[#1ec98a] transition-colors text-sm font-medium hidden md:block"
           >
             Спикеры
           </a>
           <a
             href="#contacts"
-            className="text-[#8899AA] hover:text-[#FF8C2D] transition-colors text-sm font-medium hidden md:block"
+            className="text-[#8899AA] hover:text-[#1ec98a] transition-colors text-sm font-medium hidden md:block"
           >
             Контакты
           </a>
@@ -163,20 +163,20 @@ export default function Index() {
       <section className="hero-bg grid-lines relative min-h-screen flex flex-col items-center justify-center px-6 md:px-12 pt-24 pb-20 overflow-hidden">
         <div
           className="orb-1 absolute top-1/4 left-10 w-64 h-64 rounded-full pointer-events-none"
-          style={{ background: "radial-gradient(circle, rgba(255,140,45,0.10) 0%, transparent 70%)" }}
+          style={{ background: "radial-gradient(circle, rgba(30,201,138,0.10) 0%, transparent 70%)" }}
         />
         <div
           className="orb-2 absolute bottom-1/4 right-10 w-96 h-96 rounded-full pointer-events-none"
-          style={{ background: "radial-gradient(circle, rgba(196,98,42,0.08) 0%, transparent 70%)" }}
+          style={{ background: "radial-gradient(circle, rgba(124,58,237,0.08) 0%, transparent 70%)" }}
         />
         <div
           className="orb-3 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] rounded-full pointer-events-none"
-          style={{ background: "radial-gradient(circle, rgba(232,160,90,0.04) 0%, transparent 70%)" }}
+          style={{ background: "radial-gradient(circle, rgba(91,142,230,0.04) 0%, transparent 70%)" }}
         />
 
         <div className="relative z-10 max-w-5xl mx-auto text-center">
           <div className="animate-slide-up inline-flex items-center gap-2 date-badge tag-chip mb-8">
-            <span className="w-2 h-2 rounded-full bg-[#FF8C2D] animate-pulse-glow inline-block" />
+            <span className="w-2 h-2 rounded-full bg-[#1ec98a] animate-pulse-glow inline-block" />
             10 и 17 апреля · Встречи со специалистами
           </div>
 
@@ -192,7 +192,7 @@ export default function Index() {
             <div className="relative">
               <div
                 className="absolute inset-0 blur-2xl opacity-30"
-                style={{ background: "radial-gradient(circle, #FF8C2D, #C4622A)" }}
+                style={{ background: "radial-gradient(circle, #1ec98a, #7c3aed)" }}
               />
               <svg
                 width="120"
@@ -220,8 +220,8 @@ export default function Index() {
                 <line x1="44" y1="20" x2="12" y2="36" stroke="url(#lg1)" strokeWidth="0.5" opacity="0.3" />
                 <defs>
                   <linearGradient id="lg1" x1="0" y1="0" x2="56" y2="56" gradientUnits="userSpaceOnUse">
-                    <stop offset="0%" stopColor="#FF8C2D" />
-                    <stop offset="100%" stopColor="#C4622A" />
+                    <stop offset="0%" stopColor="#1ec98a" />
+                    <stop offset="100%" stopColor="#7c3aed" />
                   </linearGradient>
                 </defs>
               </svg>
@@ -230,32 +230,32 @@ export default function Index() {
 
           <p className="animate-slide-up-delay2 text-[#8899AA] text-lg md:text-xl max-w-2xl mx-auto leading-relaxed mb-4">
             Приглашаем родителей, столкнувшихся с{" "}
-            <span className="text-[#FF8C2D]">СДВГ, расстройствами аутичного спектра</span>, а также
+            <span className="text-[#1ec98a]">СДВГ, расстройствами аутичного спектра</span>, а также
             близких взрослых с{" "}
-            <span className="text-[#E8A05A]">деменцией и Альцгеймером</span>
+            <span className="text-[#a78bfa]">деменцией и Альцгеймером</span>
           </p>
 
           <div className="animate-slide-up-delay3 flex flex-col sm:flex-row items-center justify-center gap-4 mt-8 mb-10">
             <div className="flex items-center gap-3 neon-card rounded-2xl px-6 py-4">
-              <div className="w-10 h-10 rounded-xl bg-[rgba(255,140,45,0.1)] flex items-center justify-center">
-                <Icon name="Calendar" size={20} className="text-[#FF8C2D]" />
+              <div className="w-10 h-10 rounded-xl bg-[rgba(30,201,138,0.1)] flex items-center justify-center">
+                <Icon name="Calendar" size={20} className="text-[#1ec98a]" />
               </div>
               <div className="text-left">
                 <p className="font-oswald font-bold text-white text-xl">10 апреля</p>
-                <p className="text-[#FF8C2D] text-xs opacity-80">Психология · Нейропсихология</p>
+                <p className="text-[#1ec98a] text-xs opacity-80">Психология · Нейропсихология</p>
               </div>
             </div>
             <div
               className="hidden sm:block w-8 h-px"
-              style={{ background: "linear-gradient(90deg, rgba(255,140,45,0.5), rgba(196,98,42,0.5))" }}
+              style={{ background: "linear-gradient(90deg, rgba(30,201,138,0.5), rgba(124,58,237,0.5))" }}
             />
             <div className="flex items-center gap-3 neon-card rounded-2xl px-6 py-4">
-              <div className="w-10 h-10 rounded-xl bg-[rgba(196,98,42,0.1)] flex items-center justify-center">
-                <Icon name="Calendar" size={20} className="text-[#E8A05A]" />
+              <div className="w-10 h-10 rounded-xl bg-[rgba(124,58,237,0.1)] flex items-center justify-center">
+                <Icon name="Calendar" size={20} className="text-[#a78bfa]" />
               </div>
               <div className="text-left">
                 <p className="font-oswald font-bold text-white text-xl">17 апреля</p>
-                <p className="text-[#E8A05A] text-xs opacity-80">Микробиология · Ароматерапия</p>
+                <p className="text-[#a78bfa] text-xs opacity-80">Микробиология · Ароматерапия</p>
               </div>
             </div>
           </div>
@@ -264,7 +264,7 @@ export default function Index() {
 
         <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 opacity-40">
           <span className="text-xs text-[#8899AA] uppercase tracking-wider">прокрутить</span>
-          <Icon name="ChevronDown" size={16} className="text-[#FF8C2D] animate-bounce" />
+          <Icon name="ChevronDown" size={16} className="text-[#1ec98a] animate-bounce" />
         </div>
       </section>
 
@@ -299,10 +299,10 @@ export default function Index() {
               <div
                 className={`w-12 h-12 rounded-xl flex items-center justify-center ${
                   item.color === "cyan"
-                    ? "bg-[rgba(255,140,45,0.1)]"
+                    ? "bg-[rgba(30,201,138,0.1)]"
                     : item.color === "blue"
-                    ? "bg-[rgba(232,160,90,0.1)]"
-                    : "bg-[rgba(196,98,42,0.1)]"
+                    ? "bg-[rgba(91,142,230,0.1)]"
+                    : "bg-[rgba(124,58,237,0.1)]"
                 }`}
               >
                 <Icon
@@ -310,10 +310,10 @@ export default function Index() {
                   size={22}
                   className={
                     item.color === "cyan"
-                      ? "text-[#FF8C2D]"
+                      ? "text-[#1ec98a]"
                       : item.color === "blue"
-                      ? "text-[#E8A05A]"
-                      : "text-[#C4622A]"
+                      ? "text-[#5b8ee6]"
+                      : "text-[#a78bfa]"
                   }
                 />
               </div>
@@ -329,7 +329,7 @@ export default function Index() {
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
             <div className="inline-flex items-center gap-2 date-badge tag-chip mb-4">
-              <Icon name="Users" size={12} className="text-[#FF8C2D]" />
+              <Icon name="Users" size={12} className="text-[#1ec98a]" />
               Наши спикеры
             </div>
             <h2 className="font-oswald font-bold text-4xl md:text-5xl text-white uppercase tracking-tight">
@@ -380,7 +380,7 @@ export default function Index() {
                 className="flex-1"
                 style={{
                   height: 1,
-                  background: "linear-gradient(90deg, rgba(168,85,247,0.4), transparent)",
+                  background: "linear-gradient(90deg, rgba(124,58,237,0.35), transparent)",
                 }}
               />
             </div>
@@ -409,7 +409,7 @@ export default function Index() {
       <section id="contacts" className="px-6 md:px-12 py-20 relative">
         <div className="max-w-3xl mx-auto text-center">
           <div className="inline-flex items-center gap-2 date-badge tag-chip mb-4">
-            <Icon name="MapPin" size={12} className="text-[#FF8C2D]" />
+            <Icon name="MapPin" size={12} className="text-[#1ec98a]" />
             Контакты
           </div>
           <h2 className="font-oswald font-bold text-4xl md:text-5xl text-white uppercase tracking-tight mb-4">
@@ -431,10 +431,8 @@ export default function Index() {
                 <div
                   className={`w-12 h-12 rounded-xl flex items-center justify-center ${
                     c.color === "cyan"
-                      ? "bg-[rgba(255,140,45,0.1)]"
-                      : c.color === "purple"
-                      ? "bg-[rgba(196,98,42,0.1)]"
-                      : "bg-[rgba(232,160,90,0.1)]"
+                      ? "bg-[rgba(30,201,138,0.1)]"
+                      : "bg-[rgba(124,58,237,0.1)]"
                   }`}
                 >
                   <Icon
@@ -442,10 +440,8 @@ export default function Index() {
                     size={20}
                     className={
                       c.color === "cyan"
-                        ? "text-[#FF8C2D]"
-                        : c.color === "purple"
-                        ? "text-[#E8A05A]"
-                        : "text-[#C4622A]"
+                        ? "text-[#1ec98a]"
+                        : "text-[#a78bfa]"
                     }
                   />
                 </div>
@@ -464,7 +460,7 @@ export default function Index() {
       </section>
 
       {/* Footer */}
-      <footer className="border-t border-[rgba(255,140,45,0.08)] px-6 md:px-12 py-8">
+      <footer className="border-t border-[rgba(30,201,138,0.08)] px-6 md:px-12 py-8">
         <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
           <div className="flex items-center gap-3">
             <FullereneLogo />
@@ -474,13 +470,13 @@ export default function Index() {
             </div>
           </div>
           <div className="flex items-center gap-6 text-[#8899AA] text-sm">
-            <a href="https://www.fullerenclub.ru/" target="_blank" rel="noopener noreferrer" className="hover:text-[#FF8C2D] transition-colors">
+            <a href="https://www.fullerenclub.ru/" target="_blank" rel="noopener noreferrer" className="hover:text-[#1ec98a] transition-colors">
               Сайт центра
             </a>
-            <a href="#speakers" className="hover:text-[#FF8C2D] transition-colors">
+            <a href="#speakers" className="hover:text-[#1ec98a] transition-colors">
               Спикеры
             </a>
-            <a href="#contacts" className="hover:text-[#FF8C2D] transition-colors">
+            <a href="#contacts" className="hover:text-[#1ec98a] transition-colors">
               Контакты
             </a>
           </div>
