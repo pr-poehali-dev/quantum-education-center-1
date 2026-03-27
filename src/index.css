@@ -174,9 +174,9 @@ body::before {
 
 /* Speaker photo */
 .speaker-photo {
-  border: 2px solid rgba(30, 201, 138, 0.28);
+  border: 2px solid rgba(15, 168, 112, 0.38);
   box-shadow:
-    0 0 30px rgba(30, 201, 138, 0.1),
+    0 0 30px rgba(15, 168, 112, 0.15),
     0 8px 32px rgba(0, 0, 0, 0.4);
 }
 

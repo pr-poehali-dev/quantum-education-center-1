@@ -73,7 +73,7 @@ const SpeakerCard = ({
           />
           <div
             className={`absolute -bottom-2 -right-2 w-6 h-6 rounded-full flex items-center justify-center text-xs font-bold ${
-              isCyan ? "bg-[#1ec98a]" : "bg-[#7c3aed]"
+              isCyan ? "bg-[#0fa870]" : "bg-[#7c3aed]"
             } text-white`}
           >
             ✦
@@ -92,8 +92,8 @@ const SpeakerCard = ({
           </h3>
           <p
             className={`text-sm mt-1 ${
-              isCyan ? "text-[#1ec98a]" : "text-[#a78bfa]"
-            } opacity-80`}
+              isCyan ? "text-[#0fa870]" : "text-[#a78bfa]"
+            } opacity-90`}
           >
             {title}
           </p>
@@ -103,7 +103,7 @@ const SpeakerCard = ({
       <div
         className={`px-4 py-3 rounded-xl text-sm font-medium ${
           isCyan
-            ? "bg-[rgba(30,201,138,0.07)] border border-[rgba(30,201,138,0.15)] text-[#1ec98a]"
+            ? "bg-[rgba(15,168,112,0.09)] border border-[rgba(15,168,112,0.2)] text-[#0fa870]"
             : "bg-[rgba(124,58,237,0.07)] border border-[rgba(124,58,237,0.15)] text-[#a78bfa]"
         }`}
       >
