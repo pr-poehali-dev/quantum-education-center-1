@@ -277,7 +277,7 @@ export default function Index() {
               </span>
               <div className="flex-1 h-px bg-gray-100" />
             </div>
-            <div className="grid md:grid-cols-2 gap-5">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
               <SpeakerCard
                 photo={SPEAKER_EFREMOVA}
                 name="Ефремова Мария Викторовна"
