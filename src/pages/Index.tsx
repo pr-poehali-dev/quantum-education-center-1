@@ -137,6 +137,14 @@ export default function Index() {
         </div>
         <div className="flex items-center gap-6">
           <a
+            href="https://www.fullerenclub.ru/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-[#8899AA] hover:text-[#2DFFC8] transition-colors text-sm font-medium hidden md:block"
+          >
+            Сайт центра
+          </a>
+          <a
             href="#speakers"
             className="text-[#8899AA] hover:text-[#2DFFC8] transition-colors text-sm font-medium hidden md:block"
           >
@@ -466,6 +474,9 @@ export default function Index() {
             </div>
           </div>
           <div className="flex items-center gap-6 text-[#8899AA] text-sm">
+            <a href="https://www.fullerenclub.ru/" target="_blank" rel="noopener noreferrer" className="hover:text-[#2DFFC8] transition-colors">
+              Сайт центра
+            </a>
             <a href="#speakers" className="hover:text-[#2DFFC8] transition-colors">
               Спикеры
             </a>
