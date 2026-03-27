@@ -1,7 +1,7 @@
 import Icon from "@/components/ui/icon";
 
 const SPEAKER_EFREMOVA =
-  "https://cdn.poehali.dev/projects/766995cb-632a-44cf-867a-0b2115ca787d/bucket/9854b3be-5967-46d8-babd-68c9602825c2.jpg";
+  "https://cdn.poehali.dev/projects/766995cb-632a-44cf-867a-0b2115ca787d/bucket/c4457521-41f9-405f-adc0-ba28a5609ce1.png";
 const SPEAKER_GRIGOREVA =
   "https://cdn.poehali.dev/projects/766995cb-632a-44cf-867a-0b2115ca787d/bucket/4c60adb4-186d-4d3e-a482-7bee35b3c546.jpg";
 const SPEAKER_STOTSKAYA =
