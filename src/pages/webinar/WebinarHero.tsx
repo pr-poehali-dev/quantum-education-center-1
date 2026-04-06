@@ -55,6 +55,16 @@ export default function WebinarHero() {
 
           {/* Buttons */}
           <div className="wu-fade wu-d3" style={{ display: "flex", flexWrap: "wrap", gap: 12 }}>
+            <a href="https://rodradrost.skillspace.ru/l/vstrechadetiovz" target="_blank" rel="noopener noreferrer"
+              className="wu-btn-gold"
+              style={{
+                display: "inline-flex", alignItems: "center", gap: 10,
+                background: "linear-gradient(135deg, #c9a227, #a07c18)",
+                color: "#06080f", fontWeight: 700, fontSize: 15,
+                padding: "13px 26px", borderRadius: 100, textDecoration: "none", transition: "all 0.25s",
+              }}>
+              ✅ Зарегистрироваться на встречу
+            </a>
             <a href="https://vk.com/rostobraz" target="_blank" rel="noopener noreferrer"
               className="wu-btn-gold"
               style={{
